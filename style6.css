@@ -1,0 +1,124 @@
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#herof {
+    height: calc(100vh - 60px); 
+    padding-top: 0; 
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.mySlides.active {
+    display: block;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: width 0.3s, height 0.3s;
+    opacity: 0.2;
+}
+
+.dot.active {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: width 0.3s, height 0.3s;
+
+}
+
+.carousel-text {
+    width: 100%;
+    position: absolute;
+    top: 29%; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; 
+    padding: 10px; 
+    text-align: center; 
+    box-sizing: border-box; 
+}
+
+
+.carousel-text h1 {
+    margin: 0;
+    font-size: 70px;
+    line-height:35px;
+}
+
+.carousel-text p {
+    padding-top: 30px;
+    margin: 0;
+    font-size: 60px;
+}
+
+@media (max-width: 768px) {
+    .carousel-text h1 {
+        font-size: 20px;
+    }
+    .carousel-text p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-text h1 {
+        font-size: 20px;
+    }
+    .carousel-text p {
+        font-size: 20px;
+    }
+}

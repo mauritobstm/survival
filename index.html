@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FNG Entertainment</title>
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="style6.css">
+    <link rel="stylesheet" href="galeriaa.css">
+    <link rel="stylesheet" href="assets/css/linea.css">
+
+  </head>
+
+<body style="background: #424242;" oncontextmenu="return false">
+
+  <!-- Fixed navbar -->
+  <section id="header" class="pt-4 pb-4" style="background: #000000;">
+    <a href="index.html"><img src="logo.png" class="logo" alt="" width="10%"></a>
+    <div>
+      <ul id="navbar">
+        <li><a class="active" href="index.html">Inicio</a></li>
+        <li><a href="#product1">Juegos</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <a href="#" id="close"><i class="far fa-times"></i></a>
+      </ul>
+    </div>
+    <div id="mobile">
+      <i id="bar" class="fas fa-outdent text-white"></i>
+    </div>
+    <div class="lines">
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </section>
+
+    <section id="herof">
+      <div class="carousel">
+        <div class="carousel-images">
+          <div class="mySlides active" style="background-image: url('1m.png'); filter:blur(5px);"></div>
+          <div class="mySlides" style="background-image: url('2m.png'); filter:blur(5px);"></div>
+          <div class="mySlides" style="background-image: url('3m.png'); filter:blur(5px);"></div>
+        </div>
+        <div class="carousel-indicators">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <div class="carousel-text">      
+          <p  style='color: white;'>DOMINA EL JUEGO, VIVE LA EXPERIENCIA.</p>
+          <a id="bt" class="btnfos btnfos-1" href="#product1">
+            <svg>
+              <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+            </svg>
+            Explorar
+          </a>
+        </div>
+      </div>
+    </section>
+
+<script>
+
+  let slideIndex = 0;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  let autoSlideInterval;
+
+  function showSlides(n) {
+      for (let i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("active");
+      }
+      for (let i = 0; i < dots.length; i++) {
+          dots[i].classList.remove("active");
+      }
+      slides[n].classList.add("active");
+      dots[n].classList.add("active");
+  }
+
+  function nextSlide() {
+      slideIndex = (slideIndex + 1) % slides.length;
+      showSlides(slideIndex);
+  }
+
+  function currentSlide(n) {
+      clearInterval(autoSlideInterval);
+      slideIndex = n - 1;
+      showSlides(slideIndex);
+      autoSlideInterval = setInterval(nextSlide, 4000);
+  }
+
+  function initCarousel() {
+      showSlides(slideIndex);
+      autoSlideInterval = setInterval(nextSlide, 4000);
+  }
+
+  document.addEventListener("DOMContentLoaded", initCarousel);
+
+</script>
+
+<section id="product1" class="section-p1">
+  <div class="">
+    <h2 id="text-prod"><strong>EXPLORA NUESTROS JUEGOS MÁS RECIENTES</strong></h2>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <a href="juegos/SurvivalEggs.html"><img src="1m.png" alt="Imagen 1"></a>
+    </div>
+    <div class="gallery-item">
+      <img src="2m.png" alt="Imagen 2">
+    </div>
+    <div class="gallery-item">
+      <img src="3m.png" alt="Imagen 3">
+    </div>
+    <div class="gallery-item">
+      <img src="3m.png" alt="Imagen 4">
+    </div>
+  </div>
+</section>
+
+
+<footer class="section-p1" style="background: #000000;">
+        <div class="col" >
+            
+            <h4 class="text-white"><strong>Contacto</strong></h4>
+            <p class="text-white"><i class="fal fa-map text-white"></i> Argentina, Capital Federal 198</p>
+            <p class="text-white"><i class="fas fa-phone-alt text-white"></i> hola@gmail.com</p>
+            <p class="text-white"><i class="far fa-clock text-white"></i> (+00) 1122334455</p>
+            
+            <div class="follow">
+                <h4 class="text-white"><strong>Siguenos en</strong></h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f text-white"></i>
+                    <i class="fab fa-twitter text-white"></i>
+                    <i class="fab fa-instagram text-white"></i>
+                    <i class="fab fa-pinterest-p text-white"></i>
+                    <i class="fab fa-youtube text-white"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col m-1">
+            <h4 class="text-white"><strong>Nosotros</strong></h4>
+            <a class="text-white" href="about">Sobre Nosotros  </a>
+            <a class="text-white" href="contact">Contactanos   </a>
+        </div>
+
+        <div class="col m-1">
+            <h4 class="text-white"><strong>Cuenta</strong></h4>
+            <a class="text-white" href="#">Ayuda Whats App</a>
+        </div>
+
+        
+
+        <div class="copyright">
+            <p class="text-white">© 2024, FNG Entertainment</p>
+        </div>
+</footer>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="script1.js"></script>
+
+
+</body>
+</html>

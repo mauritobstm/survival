@@ -1,0 +1,252 @@
+.custom-input {
+    background-color: #424242;
+    color: white;
+}
+
+.custom-input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.custom-input:-ms-input-placeholder {
+    color: white;
+}
+
+.custom-input::-ms-input-placeholder {
+    color: white;
+}
+
+.containerr{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-containerf {
+    display: flex;
+    width: 90%;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-containerf {
+    flex: 1;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-containerf img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form-containerf {
+    flex: 1;
+    padding: 20px;
+}
+
+.form-containerf h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.form-containerf p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.name-group {
+    display: flex;
+    gap: 10px;
+}
+
+.name-group input {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    font-size: 14px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #bbb;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00a2d1;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #008cba;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contact-containerf {
+        flex-direction: column;
+    }
+
+    .image-containerf {
+        order: -1;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px){
+    .contact-containerf {
+        flex-direction: column;
+    }
+
+    .image-containerf {
+        order: -1;
+        height: 200px;
+    }
+}
+
+
+
+
+
+
+.card-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 500px;
+    padding: 10px;
+}
+
+.image-placeholder {
+    width: 30%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow-wrap: break-word;
+}
+
+
+.content #bt{
+    color: #000;
+    text-align: center;
+    justify-content: center;
+}
+
+.content .btnfos-1 rect {
+    fill: none;
+    stroke: #000000;
+}
+
+.textfin{
+    text-align: end;
+}
+
+
+h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+p {
+    margin: 0;
+    font-size: 15px;
+    overflow-wrap: break-word; /* Ensures text breaks within words if necessary */
+    word-wrap: break-word;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .textfin{
+        text-align: center;
+    }
+
+    .image-placeholder {
+        width: 100%;
+        height: 200px;
+        order: -1
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex-direction: column;
+        height: auto;
+        justify-content: start;
+    }
+
+    .textfin{
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
